@@ -85,31 +85,31 @@ export const StructuredResponse = () => {
                   </div>
                 </div>
                 
-                <div className="p-12 md:p-16 space-y-16">
-                  <div className="space-y-6">
-                    <h5 className="text-4xl font-black tracking-tight leading-tight">From inquiry to booked next step with less friction.</h5>
-                    <p className="text-white/40 text-lg font-medium leading-relaxed">
+                <div className="p-8 md:p-12 space-y-12">
+                  <div className="space-y-4">
+                    <h5 className="text-3xl md:text-4xl font-black tracking-tight leading-tight">From inquiry to booked next step with less friction.</h5>
+                    <p className="text-white/40 text-base font-medium leading-relaxed">
                       A structured workflow helps the team respond faster, capture usable context earlier, and move leads forward.
                     </p>
                   </div>
 
-                  <div className="space-y-10">
+                  <div className="space-y-8">
                     {[
                       { icon: Clock, label: "Response target", sub: "First-touch speed", val: "< 60s" },
                       { icon: Calendar, label: "Booked next step", sub: "Scheduling continuity", val: "1 flow" },
                       { icon: Database, label: "CRM updated", sub: "Notes, tags, and routing", val: "Synced" }
                     ].map((stat, i) => (
-                      <div key={i} className="flex items-center justify-between group">
-                        <div className="flex items-center gap-6">
-                          <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center transition-colors group-hover:bg-white/10">
-                            <stat.icon className="w-8 h-8 text-white/40" />
+                      <div key={i} className="flex items-center justify-between gap-4 group">
+                        <div className="flex items-center gap-4 min-w-0">
+                          <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center transition-colors group-hover:bg-white/10 shrink-0">
+                            <stat.icon className="w-6 h-6 text-white/40" />
                           </div>
-                          <div>
-                            <div className="text-lg font-black tracking-tight">{stat.label}</div>
-                            <div className="text-[10px] text-white/40 uppercase font-black tracking-[0.2em]">{stat.sub}</div>
+                          <div className="min-w-0">
+                            <div className="text-base font-black tracking-tight truncate text-white">{stat.label}</div>
+                            <div className="text-[9px] text-white/40 uppercase font-black tracking-[0.2em] truncate mt-0.5">{stat.sub}</div>
                           </div>
                         </div>
-                        <div className="text-5xl font-black tracking-tight">{stat.val}</div>
+                        <div className="text-3xl md:text-4xl font-black tracking-tight text-white shrink-0">{stat.val}</div>
                       </div>
                     ))}
                   </div>
