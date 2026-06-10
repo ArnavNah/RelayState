@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0b1326;
+  --color-surface-dim: #0b1326;
+  --color-surface-bright: #31394d;
+  --color-surface-container: #171f33;
+  --color-on-surface: #dae2fd;
+  --color-primary: #ffffff;
+  --color-on-primary: #2f3131;
+  --color-secondary: #adc9eb;
+  --color-accent: #C88D5F;
+  --color-copper: #C88D5F;
+  --color-copper-500: #C88D5F;
+  --color-copper-600: #B2764B;
+  --color-teal-500: #14B8A6;
+  --color-teal-600: #0D9488;
+  
+  --font-sans: var(--font-inter), sans-serif;
+  
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+}
+
+:root {
+  --background: #0b1326;
+  --foreground: #dae2fd;
+}
+
+* {
+  border-color: rgba(218, 226, 253, 0.1);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-elevated {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glow-accent, .glow-copper {
+  box-shadow: 0 0 40px rgba(200, 141, 95, 0.15);
+}
+
+.glow-teal {
+  box-shadow: 0 0 40px rgba(20, 184, 166, 0.15);
+}
+
+.hover\:glow-copper:hover {
+  box-shadow: 0 0 40px rgba(200, 141, 95, 0.25);
+}
+
+.hover\:glow-teal:hover {
+  box-shadow: 0 0 40px rgba(20, 184, 166, 0.25);
+}
+
+::selection {
+  background: #C88D5F;
+  color: #fff;
+}
+
